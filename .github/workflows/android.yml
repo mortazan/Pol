@@ -26,7 +26,9 @@ jobs:
         with:
           channel: stable
           cache: true
-
+          
+      - name: Install Android SDK 36
+        run: yes | sdkmanager "platforms;android-36"
       - name: Configure Flutter Java
         run: flutter config --jdk-dir="$JAVA_HOME"
 
